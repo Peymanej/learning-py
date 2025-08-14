@@ -253,8 +253,7 @@ else :
 
     for a in guest_info.keys() :
         print (f'{a} likes to drink {guest_info[a]}!')
-    
-    # test git
-    
+
+
 
 
