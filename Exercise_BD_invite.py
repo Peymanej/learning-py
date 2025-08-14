@@ -247,13 +247,19 @@ else :
         fav_drink = int (input (f'What is {name}\'s favourite drink? '))
         while fav_drink - 1 not in range (0, 3):
             fav_drink = int (input ('Answer is not valid!\nPlease enter the number assigned to the drink: '))
-        guest_info[f'{name}'] = drinks[fav_drink - 1]        
+        guest_info[f'{name}'] = [drinks[fav_drink - 1]]
+        print ('The list of foods is:\n')
+        for food in foods:
+            print (f'{foods.index (food) + 1} - {food}' ) #type: ignore
+        fav_food = int (input (f'What is {name}\'s favourite food? '))
+        while fav_food - 1 not in range (0, 3): #type: ignore
+            fav_food = int (input ('Answer is not valid!\nPlease enter the number assigned to the drink: '))
+        guest_info[f'{name}'].append (foods[fav_food - 1])     #type: ignore
+   
     for a, d in guest_info.items():
-        print (f'{a.title()} likes to drink: {d}')
+        print (f'{a.title()} likes to drink {d[0]} and prefers {d[1]} for dinner!')
 
-    for a in guest_info.keys() :
-        print (f'{a} likes to drink {guest_info[a]}!')
+### for a in guest_info.keys() :
+###     print (f'{a} likes to drink {guest_info[a][0]} an prefers {guest_info[a][1]} for dinner!')
 
-
-
-
+        # Cost information:
