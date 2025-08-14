@@ -9,7 +9,7 @@ print ('Size: ', my_dict['size'])
 my_dict['type'] = 'Safe'
 my_dict['score'] = 25 # type: ignore
 print (my_dict)
-test
+
 del my_dict['type']
 print (my_dict)
 
